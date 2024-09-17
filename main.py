@@ -90,10 +90,8 @@ machine = SandwichMachine(resources)
 def complete_transaction(size):
     if not machine.check_resources(recipes[size]["ingredients"]):
         return
-
     if not machine.transaction_result(machine.process_coins(), recipes[size]["cost"]):
         return
-
     machine.make_sandwich(size, recipes[size]["ingredients"])
 
 user_input = None
