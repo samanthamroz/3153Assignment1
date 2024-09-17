@@ -71,8 +71,7 @@ class SandwichMachine:
         if coins < cost:
             print("Sorry, that is not enough money. Money refunded.")
             return False
-        if coins > cost:
-            print(f"Here is ${coins - cost:.2f} in change")
+        print(f"Here is ${coins - cost:.2f} in change")
         return True
 
     def make_sandwich(self, sandwich_size, order_ingredients):
